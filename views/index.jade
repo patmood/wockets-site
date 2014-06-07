@@ -1,10 +1,12 @@
 extends layout
 
 block content
-  h1= title
-  .download
-    p Get to the Moon Base!
-    form(action="/sms", method="post")
-      input(type="text", name="phone", autofocus)
-      button(type="submit") Send
-
+  .container
+    h1= title
+    .download
+      p Get to the Moon Base!
+      form(id="sms")
+        input(type="text", name="phone", autofocus)
+        button(type="submit") Send
+    .preview
+      img(src="http://placekitten.com/g/300/400")

@@ -15,13 +15,13 @@ router.post('/sms', function(req, res) {
 
   twilio.sendMessage({
     body: 'Download Wobble Wockets for iOS: http://wobblewockets.com'
-  , to: '+13127140629' // req.body.phone
+  , to: req.body.phone //'+13127140629'
   , from: '+13314818220'
   }, function(err, responseBody) {
     console.log(err)
-    if (err) return res.send('Error:' + err)
-    console.log('SMS sent!', responseBody)
-    return responseBody
+    if (err) return res.status(err.status).send(err.message)
+    console.log('SMS sent!')
+    res.send('Success')
   })
 })
 
