@@ -5,8 +5,12 @@ block content
     h1= title
     .download
       p Get to the Moon Base!
+      a(href="#", class="dl-btn", id="download-apple")
+        img(src="/images/download-apple.png")
+      a(href="#", class="dl-btn", id="download-android")
+        img(src="/images/download-android.png")
       form(id="sms")
-        input(type="text", name="phone", autofocus)
+        input(type="text", name="phone", placeholder="Phone Number", autofocus)
         button(type="submit") Send
     .preview
       img(src="http://placekitten.com/g/300/400")
