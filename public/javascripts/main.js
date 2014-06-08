@@ -5,10 +5,10 @@ $('#sms').on('submit', function(e) {
   , type: 'POST'
   , data: $(this).serialize()
   , success: function(res) {
-      console.log(res)
+      $('#message').text(res).show().addClass('success')
     }
   , error: function(err) {
-      console.log(err)
+      $('#message').text(err.responseText).show().addClass('error')
     }
   })
 })
@@ -29,5 +29,4 @@ $(document).on('ready', function(){
     $('#download-apple').hide()
     $('#sms').hide()
   }
-
 })

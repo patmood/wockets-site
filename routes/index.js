@@ -18,10 +18,9 @@ router.post('/sms', function(req, res) {
   , to: req.body.phone //'+13127140629'
   , from: '+13314818220'
   }, function(err, responseBody) {
-    console.log(err)
     if (err) return res.status(err.status).send(err.message)
     console.log('SMS sent!')
-    res.send('Success')
+    res.send('A message has been sent to your phone!')
   })
 })
 
