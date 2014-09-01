@@ -3,18 +3,26 @@ extends layout
 block content
   .container
     h1= title
-    .download
-      p Get to the Moon Base!
-      a(href="#", class="dl-btn", id="download-apple")
-        img(src="/images/download-apple.png")
-      a(href="#", class="dl-btn", id="download-android")
-        img(src="/images/download-android.png")
-      #message
-      form(id="sms")
-        p We'll text you the download link
-        input(type="text", name="phone", placeholder="Phone Number", autofocus)
-        button(type="submit") SMS Me The Link!
-    .preview
-      .iphone
-        .demo
-          img(src="http://placekitten.com/g/243/432")
+    .pure-g
+      .pure-u-1.pure-u-md-2-3
+        p Get to the Moon Base!
+        a.pure-button.pure-button-primary#download-apple(href="#")
+          i.fa.fa-apple
+          |  Download iOS
+        a.pure-button.pure-button-primary#download-android(href="#")
+          i.fa.fa-android
+          |  Download Android
+        #message
+        form.pure-form#sms
+          fieldset
+            p We can also text you the download link
+            input(type="text", name="phone", placeholder="Phone Number", autofocus)
+            button.pure-button(type="submit")
+              i.fa.fa-phone-square
+              |  SMS Link
+
+      .pure-u-1.pure-u-md-1-3
+        .device-mockup.iphone5.portrait.black
+          .device
+            .screen
+              img(src="http://placekitten.com/g/300/432")
