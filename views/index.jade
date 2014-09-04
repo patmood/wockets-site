@@ -2,14 +2,14 @@ extends layout
 
 block content
   .container
-    h1= title
     .pure-g
       .pure-u-1.pure-u-md-2-3
-        p Get to the Moon Base!
-        a.pure-button.pure-button-primary#download-apple(href="#")
+        h1= title
+        h2 Get to the Moon Base!
+        a.download.pure-button.pure-button-primary#download-apple(href="#")
           i.fa.fa-apple
           |  Download iOS
-        a.pure-button.pure-button-primary#download-android(href="#")
+        a.download.pure-button.pure-button-primary#download-android(href="#")
           i.fa.fa-android
           |  Download Android
         #message
